@@ -1,3 +1,4 @@
+//done
 const showInputError = (formElement, inputElement, errorMessage, settings) => {
   const errorElementId = `#${inputElement.id}-error`;
   const errorElement = formElement.querySelector(errorElementId);
@@ -5,7 +6,7 @@ const showInputError = (formElement, inputElement, errorMessage, settings) => {
   errorElement.textContent = errorMessage;
   errorElement.classList.add(settings.errorClass);
 };
-
+//done
 const hideInputError = (formElement, inputElement, settings) => {
   const errorElementId = `#${inputElement.id}-error`;
   const errorElement = formElement.querySelector(errorElementId);
@@ -13,20 +14,20 @@ const hideInputError = (formElement, inputElement, settings) => {
   errorElement.classList.remove(settings.errorClass);
   errorElement.textContent = "";
 };
-
+//done
 const checkInputValidity = (formElement, inputElement, settings) => {
   if (!inputElement.validity.valid) {
     showInputError(
       formElement,
       inputElement,
       inputElement.validationMessage,
-      settings,
+      settings
     );
   } else {
     hideInputError(formElement, inputElement, settings);
   }
 };
-
+//done
 const hasInvalidInput = (inputList) => {
   return inputList.some((inputElement) => {
     return !inputElement.validity.valid;
@@ -42,13 +43,13 @@ const toggleButtonState = (inputList, buttonElement, settings) => {
     buttonElement.disabled = false;
   }
 };
-
+//done
 const setEventListeners = (formElement, settings) => {
   const inputList = Array.from(
-    formElement.querySelectorAll(settings.inputSelector),
+    formElement.querySelectorAll(settings.inputSelector)
   );
   const buttonElement = formElement.querySelector(
-    settings.submitButtonSelector,
+    settings.submitButtonSelector
   );
 
   toggleButtonState(inputList, buttonElement, settings);
@@ -60,7 +61,7 @@ const setEventListeners = (formElement, settings) => {
     });
   });
 };
-
+//done
 const enableValidation = (settings) => {
   const formElement = document.querySelector(settings.formSelector);
   formElement.addEventListener("submit", (evt) => {

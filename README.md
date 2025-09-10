@@ -1,10 +1,10 @@
 # Simple Todo App
 
-Give a brief description of the project here. Feel free to give it a different name.
+A simple web app to organize your todo list.
 
 ## Functionality
 
-Give a more detailed explanation of the project and its functionality.
+The app allows input of new todo items with an optional date as well as the ability to check them as completed and delete them.
 
 ## Technology
 
