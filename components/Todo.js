@@ -1,11 +1,7 @@
 class Todo {
   constructor(data, selector) {
-    (this._data = data),
-      (this._templateElement = document.querySelector(selector));
-    //       (this._id = data.id),
-    //       (this._name = data.name),
-    //       (this._completed = data.completed),
-    //       (this._date = data.date);
+    this._data = data;
+    this._templateElement = document.querySelector(selector);
   }
 
   _setEventListeners() {
