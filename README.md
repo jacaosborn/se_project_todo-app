@@ -8,10 +8,12 @@ The app allows input of new todo items with an optional date as well as the abil
 
 ## Technology
 
-Give a description of the technologies and techniques used. Pictures, GIFs, or screenshots that detail the project features are recommended.
+This app was made using HTML, CSS, and Javascript. Forked and refactored from existing code.
+
+It uses JS classes to create the todo items and to enable and handle validation of the todo form.
 
 ## Deployment
 
 This project is deployed on GitHub Pages:
 
-- ADD LINK HERE
+https://jacaosborn.github.io/se_project_todo-app/
