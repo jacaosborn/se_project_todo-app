@@ -12,10 +12,13 @@ const todosList = document.querySelector(".todos__list");
 
 const openModal = (modal) => {
   modal.classList.add("popup_visible");
+  modal.keyDownHandler = escapeKeyHandler(modal);
+  window.addEventListener("keydown", modal.keyDownHandler);
 };
 
 const closeModal = (modal) => {
   modal.classList.remove("popup_visible");
+  window.removeEventListener("keydown", modal.keyDownHandler);
 };
 
 // The logic in this function should all be handled in the Todo class.
@@ -33,6 +36,14 @@ addTodoButton.addEventListener("click", () => {
 addTodoCloseBtn.addEventListener("click", () => {
   closeModal(addTodoPopup);
 });
+
+function escapeKeyHandler(modalToClose) {
+  return function (evt) {
+    if (evt.key === "Escape") {
+      closeModal(modalToClose);
+    }
+  };
+}
 
 addTodoForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
